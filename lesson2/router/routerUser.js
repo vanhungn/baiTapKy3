@@ -8,7 +8,7 @@ const controllerUserKey=require("../controller/userControllerKey");
 const systemController=require("../controller/systemController");
 
 router.put("/system/statistic",middlerwareUserKey,systemController)
-router.get("/",middlerwareUserKey,controllerUserKey);
+router.get("/api",middlerwareUserKey,controllerUserKey);
 router.get("/",middlerWareUser,controllerUser);
 
 module.exports=router;

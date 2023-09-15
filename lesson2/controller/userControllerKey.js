@@ -1,11 +1,13 @@
-const resource=require("../data/dataResource")
+const resource=require("../data/dataUser")
 
 const hendelerUSerKey=(req,res)=>{
-    const {username}=req.query;
-    const hensdlerKey=resource.filter((product)=>product.user===username)
+    const {apiKey}=req.query;
+    const hensdlerKey=resource.filter((product)=>product.apiKey===apiKey);
     if(hensdlerKey)
     {
         res.json(hensdlerKey)
+    }else{
+        res.status(400).json('err')
     }
 }
 

@@ -6,6 +6,4 @@ const apiRoute = require('./ipa');
 route.use("/",apiRoute)
    
   
-
-
 module.exports = route;
